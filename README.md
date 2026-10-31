@@ -29,7 +29,7 @@ Run with user provided meta.csv:
 ![Figure 2. Test file graph DAG](test/docs/filegraph.svg)
 
 
-# **Plots from multiqc HTML report**
+# **Plots from multiqc report**
 
 
 ## **Figure 3. Aggregated general statistics**
