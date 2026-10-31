@@ -1,0 +1,13 @@
+# workflow/envs/fastq-qc.yaml
+name: fastq-qc
+
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+
+dependencies:
+  - fastqc
+  - multiqc
+  - snakemake
+  - pandas
