@@ -1,0 +1,40 @@
+import os
+import pandas as pd
+
+configfile: "config/config.yaml"
+META = config.get("META", "meta.csv")
+OUTDIR = config.get("OUTDIR", "../results")
+INDIR = config.get("INDIR", "../data")
+
+meta = pd.read_csv(META, dtype=str)
+
+# (genotype, biosample) -> list of runs
+groups = {
+    key: list(df["Run"])
+    for key, df in meta.groupby(["genotype", "BioSample"])
+}
+
+wildcard_constraints:
+    read = "[23]"
+
+
+def fastqc_for_group(wildcards):
+    """All FastQC zips for one genotype/biosample pair."""
+    runs = groups[(wildcards.genotype, wildcards.biosample)]
+    return [
+        f"{OUTDIR}/{wildcards.genotype}/{wildcards.biosample}/{r}_{read}_fastqc.zip"
+        for r in runs
+        for read in (2, 3)
+    ]
+
+
+# Rule for generating all reports
+rule all:
+    input:
+        [f"{OUTDIR}/{g}/{b}/{b}_multiqc.html" for g, b in groups],
+        OUTDIR + "/multiqc/multiqc_report.html"
+
+
+include: "rules/fastqc.smk"
+include: "rules/multiqc_samples.smk"
+include: "rules/multiqc_all.smk"
