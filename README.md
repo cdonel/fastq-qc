@@ -1,6 +1,6 @@
 # fastq-qc
 
-Snakemake pipeline that takes fastq.gz files and produces fastqc reports for each SRA run. Multiqc is then used to aggregate the fastqc reports into a singular quality control report. This report can be in the results directory after executing. 
+Snakemake pipeline that takes fastq.gz files and produces fastqc reports for each SRA run. Multiqc is then used to aggregate the fastqc reports into a singular quality control report. This report can be found in the results directory after executing. 
 
 Required dependencies to run:
 
