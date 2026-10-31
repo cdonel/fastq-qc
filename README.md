@@ -21,6 +21,7 @@ Run with user provided meta.csv:
 ## Workflow
 
 
+*Figure 1. Test directed acyclic graph (DAG)*
 ![Figure 1. Test directed acyclic graph (DAG)](test/docs/dag.svg)
 
 
