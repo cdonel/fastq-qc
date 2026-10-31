@@ -18,27 +18,27 @@ Run with user provided meta.csv:
 `snakemake --cores 4 --use-conda --config META="your/path/meta.csv"`
 
 
-**## Workflow**
+# **Workflow**
 
 
-**Figure 1. Test directed acyclic graph (DAG)**
+## **Figure 1. Test directed acyclic graph (DAG)**
 ![Figure 1. Test directed acyclic graph (DAG)](test/docs/dag.svg)
 
 
-
-**Figure 2. Test file graph DAG**
+## **Figure 2. Test file graph DAG**
 ![Figure 2. Test file graph DAG](test/docs/filegraph.svg)
 
 
-**## Plots from multiqc HTML report**
+# **Plots from multiqc HTML report**
 
 
-**Figure 3. Aggregated general statistics**
+## **Figure 3. Aggregated general statistics**
 ![Figure 3. Aggregated general statistics](test/docs/general_statistics.png)
 
 
-**Figure 4. Aggregated per sequence quality scores**
+## **Figure 4. Aggregated per sequence quality scores**
 ![Figure 4. Aggregated per sequence quality scores](test/docs/fastqc_per_sequence_quality_scores_plot.svg)
 
-**Figure 5. Aggregated per sequence gc content**
+
+## **Figure 5. Aggregated per sequence gc content**
 ![Figure 5. Aggregated per sequence gc content](test/docs/fastqc_per_sequence_gc_content_plot.svg)
