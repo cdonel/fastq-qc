@@ -7,7 +7,6 @@ channels:
   - nodefaults
 
 dependencies:
-  - fastqc
-  - multiqc
-  - snakemake
-  - pandas
+  - fastqc=0.13.0
+  - multiqc=1.35
+  - pandas=3.1.1

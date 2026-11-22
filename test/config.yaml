@@ -1,4 +1,4 @@
 # test/config.yaml
-META: "test/meta.csv"
-INDIR: "test/data"
-OUTDIR: "test/results"
+META: "test/data/fastq-qc/meta.csv"
+INDIR: "test/data/fastq-qc"
+OUTDIR: "test/results/fastq-qc"

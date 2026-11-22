@@ -3,8 +3,8 @@ import pandas as pd
 
 configfile: "config/config.yaml"
 META = config.get("META", "meta.csv")
-OUTDIR = config.get("OUTDIR", "../results")
-INDIR = config.get("INDIR", "../data")
+INDIR = config.get("INDIR", "../results/sra-meta-fetch")
+OUTDIR = config.get("OUTDIR", "../results/fastq-qc")
 
 meta = pd.read_csv(META, dtype=str)
 
